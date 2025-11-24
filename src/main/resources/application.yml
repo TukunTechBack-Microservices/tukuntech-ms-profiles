@@ -1,6 +1,6 @@
 spring:
   application:
-    name: tukuntech-ms-iam
+    name: tukuntech-ms-profiles
 
   datasource:
     url: ${DB_URL}
@@ -39,11 +39,22 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
 
+cors:
+  allowed-origins:
+    - http://localhost:4200
+  allowed-methods:
+    - GET
+    - POST
+    - PUT
+    - PATCH
+    - DELETE
+    - OPTIONS
+  allowed-headers:
+    - "*"
+  allow-credentials: true
+
 app:
   security:
     jwt:
       secret: ${JWT_SECRET}
       issuer: tukuntech-api
-      access-token-expiration: ${JWT_ACCESS_EXPIRATION:1800000}
-      refresh-token-expiration: ${JWT_REFRESH_EXPIRATION:1209600000}
-      maximum-sessions: ${JWT_MAX_SESSIONS:5}

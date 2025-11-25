@@ -43,7 +43,7 @@ springdoc:
 cors:
   allowed-origins:
     - http://localhost:4200
-    - - http://localhost:8083
+    - http://localhost:8081
   allowed-methods:
     - GET
     - POST
